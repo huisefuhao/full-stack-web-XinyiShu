@@ -9,7 +9,7 @@ TODO : Modify to match your project specific Travis Build
 
 ## Web Site
 
-TODO : Please provide a link to your web site [![Xinyi Shu](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://protected-forest-53329.herokuapp.com/)
+[My website](https://protected-forest-53329.herokuapp.com/)
 
 ## Key Features
 
