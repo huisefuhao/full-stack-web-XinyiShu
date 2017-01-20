@@ -4,12 +4,12 @@ TODO : Please provide a detailed project description.
 
 ## Build status
 
-TODO : Modify to match your project specific Travis Build
+DONE : Modify to match your project specific Travis Build
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-XinyiShu)
 
 ## Web Site
 
-[My website](https://protected-forest-53329.herokuapp.com/)
+DONE: [My website](https://protected-forest-53329.herokuapp.com/)
 
 ## Key Features
 
