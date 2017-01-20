@@ -5,11 +5,11 @@ TODO : Please provide a detailed project description.
 ## Build status
 
 TODO : Modify to match your project specific Travis Build
-[![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web)
+[![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-XinyiShu)
 
 ## Web Site
 
-TODO : Please provide a link to your web site ![XinyiShu](https://protected-forest-53329.herokuapp.com/)
+TODO : Please provide a link to your web site [![Xinyi Shu](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://protected-forest-53329.herokuapp.com/)
 
 ## Key Features
 
