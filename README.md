@@ -11,6 +11,10 @@ DONE : Modify to match your project specific Travis Build
 
 DONE: [My website](https://protected-forest-53329.herokuapp.com/)
 
+## Changelog
+
+[Changelog](CHANGELOG.md)
+
 ## Key Features
 
 TODO : Please list key features of your project.
