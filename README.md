@@ -13,7 +13,7 @@ DONE: [My website](https://protected-forest-53329.herokuapp.com/)
 
 ## Changelog
 
-[Changelog](CHANGELOG.md)
+DONE: [Changelog](https://github.com/infsci2560sp17/full-stack-web-XinyiShu/blob/master/CHANGELOG.md)
 
 ## Key Features
 
