@@ -1,4 +1,6 @@
 # Masterchef
+
+## Brief intro
 1. What is the proposed name for your Web application?
 Masterchef
 2. Who is the target audience for your Web application?
@@ -12,16 +14,16 @@ Deciding what to cook and eat can be time-consuming sometimes. By using a short 
 
 ## Build status
 
-DONE : Modify to match your project specific Travis Build
+Modify to match your project specific Travis Build
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-XinyiShu)
 
 ## Web Site
 
-DONE: [My website](https://protected-forest-53329.herokuapp.com/)
+[My website](https://protected-forest-53329.herokuapp.com/)
 
 ## Changelog
 
-DONE: [Changelog](https://github.com/infsci2560sp17/full-stack-web-XinyiShu/blob/master/CHANGELOG.md)
+[Changelog](https://github.com/infsci2560sp17/full-stack-web-XinyiShu/blob/master/CHANGELOG.md)
 
 ## Key Features
 
