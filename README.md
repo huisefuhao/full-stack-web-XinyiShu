@@ -1,5 +1,16 @@
-# Your Project Name
+# Masterchef
 
+## Brief intro
+1. What is the proposed name for your Web application?
+Masterchef
+2. Who is the target audience for your Web application?
+People who want to learn how to cook and who enjoy homemade gourmet food. 
+3. What problem is it intended to solve for the target audience?
+There will be a short survey to recommend recipes according to users' preference, aside from a simple search column. If you know what you're looking for, use the search column. If you haven't made up your mind and are looking for suggestions, the website can present recommendations based on the style, diners and degree of difficulty that you choose. And then you can add ingredients to your checklist and start to cook your own food. On the other hand, users can also make and share their own recipes by uploading procedures and pictures. 
+4. How will it meet the minimum project requirements?
+All the recipes can be freely glanced. If you want to use favorite and checklist or publish recipes, a login is needed. I'll store user information and favorites to database and push related contents according to users' preference. 
+5. Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
+Deciding what to cook and eat can be time-consuming sometimes. By using a short survey of what you want right now, you can save time of aimless browsing. The most suitable recipe for the moment will be presented after a few clicks. Also, a checklist of ingredients is very useful. Moreover, I can document what you have made and what you have published in the past to show your progress and beautiful memory with food. 
 
 ## Build status
 
@@ -13,7 +24,6 @@ Modify to match your project specific Travis Build
 ## Changelog
 
 [Changelog](https://github.com/infsci2560sp17/full-stack-web-XinyiShu/blob/master/CHANGELOG.md)
-
 ## Key Features
 
 TODO : Please list key features of your project.
