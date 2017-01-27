@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - TBD.
 
-## [v1.2] - 2017-01-28
+## [v1.2] - 2017-01-26
 ### Added
 - Answered in README.md
     - What is the proposed name for your Web application?
@@ -16,12 +16,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
     - How will it meet the minimum project requirements?
     - Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
 
-## [v1.1] - 2017-01-21
+## [v1.1] - 2017-01-19
 ### Added
 - Cloned, configured, and compiled the scaffold project.
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[Unreleased]: 
-[v1.2]: 
+[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.2...HEAD
+[v1.2]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/...v1.1
