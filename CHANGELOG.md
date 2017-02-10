@@ -1,5 +1,3 @@
-This is where I document all the changes.
-
 # Change Log
 All notable changes to this project will be documented in this file.
 
