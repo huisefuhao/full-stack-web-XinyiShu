@@ -13,7 +13,7 @@ public class Recipe {
     public enum recipeType {
         Unknown,
         MeatLover,
-        Vegitarian, 
+        Vegetarian, 
         Baker,
         SweetTooth,
         Alcoholic,
