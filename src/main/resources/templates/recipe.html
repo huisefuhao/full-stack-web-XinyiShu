@@ -16,7 +16,7 @@
                 <tr data-th-each="Recipe : ${recipe}">
                     <td data-th-text="${Recipe.id}"></td>
                     <td data-th-text="${Recipe.title}"></td>
-                    <td data-th-text="${Recipe.workoutType}"></td>
+                    <td data-th-text="${Recipe.recipeType}"></td>
                 </tr>
             </table>
         </div>
@@ -25,7 +25,7 @@
         Add Recipe<br />
         <form data-th-action="@{/recipe/add}" name="addRecipeForm" method="post">
             Title: <input type="text" name="title" /><br />
-            Workout Type:<br />
+            Recipe Type:<br />
             <input type="radio" name="recipeType" value="Unknown" checked="checked" /> Unknown<br />
             <input type="radio" name="recipeType" value="MeatLover" /> MeatLover<br />
             <input type="radio" name="recipeType" value="Vegetarian" /> Vegetarian<br />

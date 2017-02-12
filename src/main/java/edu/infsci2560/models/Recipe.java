@@ -41,7 +41,7 @@ public class Recipe {
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", workoutType=" + this.recipeType + " ]";
+        return "[ id=" + this.id + ", title=" + this.title + ", recipeType=" + this.recipeType + " ]";
     }
 
     @Override
