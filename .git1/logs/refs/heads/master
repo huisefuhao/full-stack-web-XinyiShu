@@ -1,0 +1,12 @@
+0000000000000000000000000000000000000000 cb376517ec6e816b03f2b6c07e7786bb7ce6b6ca XinyiShu <xinyishu0528@gmail.com> 1486920440 +0000	commit (initial): add entity
+cb376517ec6e816b03f2b6c07e7786bb7ce6b6ca 1930484e2fb336cc359ce948197be88c69f91720 XinyiShu <xinyishu0528@gmail.com> 1486920927 +0000	commit (merge): add entity
+1930484e2fb336cc359ce948197be88c69f91720 298826270147ac85b01b06cb156e82190125af22 XinyiShu <xinyishu0528@gmail.com> 1486921206 +0000	commit: add entity
+298826270147ac85b01b06cb156e82190125af22 4f987cffaad718a3e0f3ad589f88490efc44f96d XinyiShu <xinyishu0528@gmail.com> 1486922138 +0000	commit: add recipe repository
+4f987cffaad718a3e0f3ad589f88490efc44f96d e7063caa5074ef3bcbdb3b78df17d33128d3686a XinyiShu <xinyishu0528@gmail.com> 1486922887 +0000	commit: add web services
+e7063caa5074ef3bcbdb3b78df17d33128d3686a 2c173c4e8b1551c650d46eaf3ec023a726c3fc7d XinyiShu <xinyishu0528@gmail.com> 1486923068 +0000	commit: add RESTful web service and return json
+2c173c4e8b1551c650d46eaf3ec023a726c3fc7d 6b894f3c15284d0b7e695429632cfcae07041753 XinyiShu <xinyishu0528@gmail.com> 1486923562 +0000	commit: add MVC controller and implement get&post method
+6b894f3c15284d0b7e695429632cfcae07041753 9c19c0b663cdcbc93815c5807472d333c742acbf XinyiShu <xinyishu0528@gmail.com> 1486924120 +0000	commit: create a MVC page and wire it to my repository
+9c19c0b663cdcbc93815c5807472d333c742acbf 1c43758b222031b929df8d48125bb7e8e25d405f XinyiShu <xinyishu0528@gmail.com> 1486929481 +0000	commit: change view
+1c43758b222031b929df8d48125bb7e8e25d405f 0131346070418aee1aab926feda34f567e76bf17 XinyiShu <xinyishu0528@gmail.com> 1486930709 +0000	pull: Fast-forward
+0131346070418aee1aab926feda34f567e76bf17 04694774f11437064ea2ffebc2fedb6637a8fb99 XinyiShu <xinyishu0528@gmail.com> 1486930927 +0000	commit: change view
+04694774f11437064ea2ffebc2fedb6637a8fb99 72d56872f834e887e7a9e2c3b0754442142da807 XinyiShu <xinyishu0528@gmail.com> 1486931462 +0000	commit: change view
