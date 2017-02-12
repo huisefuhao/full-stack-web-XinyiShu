@@ -16,8 +16,8 @@ public class Recipe {
         Vegetarian, 
         Baker,
         SweetTooth,
-        Alcoholic,
-        InstantGourmet
+        SuperMuscle,
+        Alcoholic
     }
 
 
