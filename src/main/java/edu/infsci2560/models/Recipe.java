@@ -14,7 +14,10 @@ public class Recipe {
         Unknown,
         MeatLover,
         Vegitarian, 
-        Baker
+        Baker,
+        SweetTooth,
+        Alcoholic,
+        InstantGourmet
     }
 
 
