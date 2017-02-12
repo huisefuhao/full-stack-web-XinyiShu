@@ -36,14 +36,14 @@ public class RecipeService {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Dvd> list(@PathVariable("id") Long id) {
+    public ResponseEntity<Recipe> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Dvd> create(@RequestBody Dvd dvd) {
+    public ResponseEntity<Recipe> create(@RequestBody Recipe recipe) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(dvd), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(recipe), headers, HttpStatus.OK);
     }
 }
