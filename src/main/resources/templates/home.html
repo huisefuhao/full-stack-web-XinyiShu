@@ -13,33 +13,35 @@
 -->
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-    background-image: url('https://www.gordonramsayrestaurants.com/assets/Carousels/_resampled/CroppedFocusedImage121578650-50-Tablet-0017-rgr-homepage-carousel-4.jpg');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-</style>
-<body>
-
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Masterchef Recipe
-  </div>
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">DON'T KNOW WHAT TO EAT TODAY?</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">Click <a data-th-href="@{/recipe}">here</a> to find a recipe.</p>
-  </div>
-</div>
-
-</body>
+    <head>
+        <title>Masterchef Recipe</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+    </head>
+    
+    <style>
+        body,h1 {font-family: "Raleway", sans-serif}
+        body, html {height: 100%}
+        .bgimg {
+            background-image: url('http://inout-home.hu/wp-content/uploads/2016/11/steak.jpg');
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+    
+    <body>
+        <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div class="w3-display-topleft w3-padding-large w3-xlarge">
+            Masterchef Recipe
+        </div>
+        <div class="w3-display-middle">
+            <h1 class="w3-jumbo w3-animate-top">DON'T KNOW WHAT TO EAT TODAY?</h1>
+            <hr class="w3-border-grey" style="margin:auto;width:40%"/>
+            <p class="w3-large w3-center">Click <a data-th-href="@{/recipe}">here</a> to find a recipe.</p>
+        </div>
+        </div>
+    </body>
 </html>
