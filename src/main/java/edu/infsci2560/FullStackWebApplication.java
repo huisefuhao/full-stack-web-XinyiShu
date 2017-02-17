@@ -20,7 +20,7 @@ public class FullStackWebApplication {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
         RecipeRepository repository = ctx.getBean(RecipeRepository.class);
-        repository.save(new Recipe(1L, "Chocolate Muffin", recipeType.Baker, "Grease 12 muffin cups or line with paper muffin liners. Combine flour, sugar, 3/4 cup chocolate chips, cocoa powder, and baking soda in a large bowl. Whisk egg, yogurt, milk, and vegetable oil in another bowl until smooth; pour into chocolate mixture and stir until batter is just blended."));
+        repository.save(new Recipe(1L, "Chocolate Muffin", recipeType.Baker, "Grease 12 muffin cups. Combine flour, sugar, 3/4 cup chocolate chips, cocoa powder and baking soda in a large bowl. Whisk egg, yogurt, milk, and vegetable oil in another bowl until smooth; pour into chocolate mixture and stir until batter is just blended. Then bake."));
         repository.save(new Recipe(2L, "Mojito", recipeType.Alcoholic, "Muddle lime juice with 1/2 to 1 teaspoon superfine sugar. Add the few mint leaves and Fill glass 2/3 with cracked ice and pour in the rum. Pitch in the squeezed-out lime shell and top off with club soda or seltzer. "));
         repository.save(new Recipe(3L, "Hot Wings", recipeType.MeatLover, "Stir together and heat until butter is melted and mixture is well blended. Remove from heat and reserve for serving. Fry coated wings in hot oil for 10 to 15 minutes, or until parts of wings begin to turn brown. Remove from heat, place wings in serving bowl, add hot sauce mixture and stir together."));
     }
