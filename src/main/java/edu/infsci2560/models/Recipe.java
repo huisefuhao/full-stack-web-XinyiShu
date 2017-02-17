@@ -26,22 +26,25 @@ public class Recipe {
     protected Long id;
     protected String title;
     protected recipeType recipeType;
+    protected String procedure;
     
     public Recipe() {
         this.id = Long.MAX_VALUE;
         this.title = null;
         this.recipeType = recipeType.Unknown;
+        this.procedure = null;
     }
     
-    public Recipe(Long id, String name, recipeType recipeType) {
+    public Recipe(Long id, String name, recipeType recipeType, String proc) {
         this.id = id;
         this.title = name;
         this.recipeType = recipeType;
+        this.procedure = proc;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", recipeType=" + this.recipeType + " ]";
+        return "[ id=" + this.id + ", title=" + this.title + ", recipeType=" + this.recipeType + ", recipeProcedure=" + this.procedure + " ]";
     }
 
     @Override
@@ -70,6 +73,13 @@ public class Recipe {
         this.recipeType = recipeType;
     }
     
+    public String getProcedure() {
+        return procedure;
+    }
+
+    public void setProcedure(String procedure) {
+        this.procedure = procedure;
+    }
     public Long getId() {
         return id;
     }
