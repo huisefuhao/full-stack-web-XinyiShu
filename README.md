@@ -20,7 +20,7 @@ Modify to match your project specific Travis Build
 
 ## Web Site
 
-[My website](https://protected-forest-53329.herokuapp.com/)
+[Masterchef Recipe](https://protected-forest-53329.herokuapp.com/)
 
 ## Changelog
 
@@ -29,8 +29,8 @@ Modify to match your project specific Travis Build
 
 TODO : Please list key features of your project.
 
-* Key Feature 1
-* Key Feature 2
+* User login
+* Add recipes by users
 * Key Feature N
 
 ## Project Details
@@ -38,10 +38,12 @@ TODO : Please list key features of your project.
 ### Landing Page
 
 TODO : please provide a description of your landing page inluding a screen shot ![](https://.../image.JPG)
+There is a welcome page. Users can click "find a recipe" to jump to login page. After verifying user information, the web will jump to my main page, recipe, where users can add new recipes. 
 
 ### User Input Form
 
 TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
+Users can add their own recipes by entering recipe titles and choosing a category of this dish. When the editing is done, user can upload their recipes to databse and recipes will be displayed on the table above. 
 
 ## API
 
