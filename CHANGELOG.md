@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 
 ## [v1.3.0] - 2017-02-17
->>>>>>> 0c31f70f34799e61d0f23189fbd79e0fe8dba4d4
+0c31f70f34799e61d0f23189fbd79e0fe8dba4d4
 ### Added
 - created a recipe entity
 - created a recipe repository
@@ -28,6 +28,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[v1.3.0]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/tree/v1.3.0...v1.2
+[v1.3.0]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.3.0...v1.2
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/...v1.1
