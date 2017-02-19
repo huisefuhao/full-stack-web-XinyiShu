@@ -36,13 +36,14 @@ TODO : Please list key features of your project.
 ## Project Details
 
 ### Landing Page
+
 There is a welcome page. Users can click "find a recipe" to jump to login page. After verifying user information, the web will jump to my main page, recipe, where users can add new recipes. 
 ![](welcome.png)
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
 Users can add their own recipes by entering recipe titles and choosing a category of this dish. When the editing is done, user can upload their recipes to databse and recipes will be displayed on the table above. 
+![](inputform.png)
 
 ## API
 
