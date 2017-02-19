@@ -15,7 +15,7 @@ import org.springframework.context.ApplicationContext;
 public class FullStackWebApplication {
 
     private static final Logger log = LoggerFactory.getLogger(FullStackWebApplication.class);
-
+    
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
