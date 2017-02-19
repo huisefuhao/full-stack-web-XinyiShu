@@ -24,11 +24,11 @@ public class Recipe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    //@Column(length = 1024)
-    @Column(columnDefinition="TEXT")
     protected Long id;
     protected String title;
     protected recipeType recipeType;
+    @Column(length = 4096)
+    //@Column(columnDefinition="TEXT")
     protected String procedure;
     
     public Recipe() {
