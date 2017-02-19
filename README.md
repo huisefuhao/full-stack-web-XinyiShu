@@ -36,9 +36,8 @@ TODO : Please list key features of your project.
 ## Project Details
 
 ### Landing Page
-
-TODO : please provide a description of your landing page inluding a screen shot ![](https://.../image.JPG)
 There is a welcome page. Users can click "find a recipe" to jump to login page. After verifying user information, the web will jump to my main page, recipe, where users can add new recipes. 
+![](welcome.png)
 
 ### User Input Form
 
