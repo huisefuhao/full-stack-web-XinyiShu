@@ -43,7 +43,7 @@ There is a welcome page. Users can click "find a recipe" to jump to login page. 
 ### User Input Form
 
 Users can add their own recipes by entering recipe titles and choosing a category of this dish. When the editing is done, user can upload their recipes to databse and recipes will be displayed on the table above. 
-![](inputform.png)
+![](full-stack-web-XinyiShu/src/main/resources/inputform.png)
 
 ## API
 
