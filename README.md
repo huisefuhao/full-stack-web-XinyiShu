@@ -38,7 +38,7 @@ TODO : Please list key features of your project.
 ### Landing Page
 
 There is a welcome page. Users can click "find a recipe" to jump to login page. After verifying user information, the web will jump to my main page, recipe, where users can add new recipes. 
-![](welcome.png)
+![](full-stack-web-XinyiShu/src/main/resources/welcome.png)
 
 ### User Input Form
 
