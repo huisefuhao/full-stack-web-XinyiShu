@@ -26,6 +26,8 @@ public class Recipe {
     protected Long id;
     protected String title;
     protected recipeType recipeType;
+    
+    @Column(length = 1024)
     protected String procedure;
     
     public Recipe() {
