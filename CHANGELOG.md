@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [v1.3.1] - 2017-02-19
+
+### Added
+- add images to recipe page
+- add style to home page
+- fix bug on saving info to repo by expanding column length
+
 
 ## [v1.3.0] - 2017-02-17
 0c31f70f34799e61d0f23189fbd79e0fe8dba4d4
@@ -28,6 +35,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace.
 - Deployed to Heroku.
 
+[v1.3.1]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.3.1...v1.3.0
 [v1.3.0]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.3.0...v1.2
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/...v1.1
