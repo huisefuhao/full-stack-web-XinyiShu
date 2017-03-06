@@ -3,6 +3,9 @@ package edu.infsci2560;
 import edu.infsci2560.models.Recipe;
 import edu.infsci2560.models.Recipe.recipeType;
 import edu.infsci2560.repositories.RecipeRepository;
+import edu.infsci2560.models.Tip;
+import edu.infsci2560.models.Tip.Category;
+import edu.infsci2560.repositories.TipRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,10 +22,14 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
-        RecipeRepository repository = ctx.getBean(RecipeRepository.class);
-        repository.save(new Recipe(1L, "Chocolate Muffin", recipeType.Baker, "Grease muffin cups. Whisk egg, yogurt, milk, and vegetable oil until smooth and combine other ingredients. Stir until batter is just blended. Then bake."));
-        repository.save(new Recipe(2L, "Mojito", recipeType.Alcoholic, "Muddle lime juice with 1/2 to 1 teaspoon superfine sugar. Add mint leaves and cracked ice. Pour in the rum. Pitch in the squeezed-out lime shell and top off with club soda."));
-        repository.save(new Recipe(3L, "Hot Wings", recipeType.MeatLover, "Fry coated wings in hot oil for 10 to 15 minutes. Place wings and add hot sauce mixture."));
+        RecipeRepository recipeRepository = ctx.getBean(RecipeRepository.class);
+        recipeRepository.save(new Recipe(1L, "Chocolate Muffin", recipeType.Baker, "Grease muffin cups. Whisk egg, yogurt, milk, and vegetable oil until smooth and combine other ingredients. Stir until batter is just blended. Then bake."));
+        recipeRepository.save(new Recipe(2L, "Mojito", recipeType.Alcoholic, "Muddle lime juice with 1/2 to 1 teaspoon superfine sugar. Add mint leaves and cracked ice. Pour in the rum. Pitch in the squeezed-out lime shell and top off with club soda."));
+        recipeRepository.save(new Recipe(3L, "Hot Wings", recipeType.MeatLover, "Fry coated wings in hot oil for 10 to 15 minutes. Place wings and add hot sauce mixture."));
+        
+        TipRepository tipRepository = ctx.getBean(TipRepository.class);
+        tipRepository.save(new Tip(1L, Category.Prep, "Use two bowls to cut corn off the cob without getting kernels everywhere."));
+        tipRepository.save(new Tip(2L, Category.Cooking, "Pre-soak pasta and it will cook in about 60 seconds."));
     }
 }
 

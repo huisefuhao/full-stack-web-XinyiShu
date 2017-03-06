@@ -42,8 +42,8 @@ public class TipService {
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Tip> create(@RequestBody Tip tips) {
+    public ResponseEntity<Tip> create(@RequestBody Tip tip) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(tips), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(tip), headers, HttpStatus.OK);
     }
 }
