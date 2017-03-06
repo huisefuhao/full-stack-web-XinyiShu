@@ -39,7 +39,11 @@ public class FullStackWebApplication {
         GoodRepository goodRepository = ctx.getBean(GoodRepository.class);
         try{
             URL link1 = new URL("https://goo.gl/tusUSY");
+            URL link2 = new URL("https://goo.gl/N4yF3H");
+            URL link3 = new URL("https://goo.gl/ejuyXP");
             goodRepository.save(new Good(1L, "Food processor", "KitchenAid", link1));
+            goodRepository.save(new Good(2L, "Coffee maker", "Keurig", link2));
+            goodRepository.save(new Good(3L, "Food scale", "Ozeri", link3));
         }catch (MalformedURLException e) {
             e.printStackTrace();
         }
