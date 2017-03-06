@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author xinyi
  */
 @RestController
-@RequestMapping("/public/api/tip")
+@RequestMapping("/public/api/tips")
 public class TipService {
 
     @Autowired

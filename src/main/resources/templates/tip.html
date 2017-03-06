@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Useful Tips</title>
+    </head>
+    <body>
+        <!--<h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s DVD's!</h1>-->
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Cooking Tips</th>
+                </tr>                
+                <tr data-th-each="Tip : ${tips}">
+                    <td data-th-text="${Tip.id}"></td>
+                    <td data-th-text="${Tip.category}"></td>
+                    <td data-th-text="${Tip.cookingTips}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Post your advice <br />
+        <form data-th-action="@{/tips/add}" name="addTipForm" method="post">
+            Workout Type:<br />
+            <input type="radio" name="category" value="Prep" /> Prep<br />
+            <input type="radio" name="category" value="Storing" /> Storing<br />
+            <input type="radio" name="category" value="Cooking" /> Cooking<br />
+            <input type="radio" name="category" value="Cleaning" /> Cleaning<br />
+            <input type="radio" name="category" value="Others" checked="checked" /> Others<br />
+            Cooking Tips: <input type="text" name="cookingTips" /><br />
+            <input type="submit" value="Add Tips"/>
+        </form>
+        
+        <hr />       
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
