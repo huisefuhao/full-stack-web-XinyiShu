@@ -1,11 +1,15 @@
 package edu.infsci2560;
 
+import java.net.*;  
+
 import edu.infsci2560.models.Recipe;
 import edu.infsci2560.models.Recipe.recipeType;
 import edu.infsci2560.repositories.RecipeRepository;
 import edu.infsci2560.models.Tip;
 import edu.infsci2560.models.Tip.category;
 import edu.infsci2560.repositories.TipRepository;
+import edu.infsci2560.models.Good;
+import edu.infsci2560.repositories.GoodRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +34,16 @@ public class FullStackWebApplication {
         TipRepository tipRepository = ctx.getBean(TipRepository.class);
         tipRepository.save(new Tip(1L, category.Prep, "Use two bowls to cut corn off the cob without getting kernels everywhere."));
         tipRepository.save(new Tip(2L, category.Cooking, "Pre-soak pasta and it will cook in about 60 seconds."));
+        tipRepository.save(new Tip(3L, category.Prep, "Use a spoon to peel a kiwi from the inside out."));
+        
+        GoodRepository goodRepository = ctx.getBean(GoodRepository.class);
+        try{
+            URL link1 = new URL("https://goo.gl/tusUSY");
+            goodRepository.save(new Good(1L, "Food processor", "KitchenAid", link1));
+        }catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
     }
 }
 
