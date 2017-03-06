@@ -1,7 +1,7 @@
 package edu.infsci2560.services;
 
 import edu.infsci2560.models.Tip;
-import edu.infsci2560.models.Tip.Category;
+import edu.infsci2560.models.Tip.category;
 import edu.infsci2560.repositories.TipRepository;
 import java.util.ArrayList;
 import java.util.HashMap;

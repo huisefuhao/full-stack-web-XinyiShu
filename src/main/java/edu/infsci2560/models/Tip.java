@@ -17,7 +17,7 @@ public class Tip {
 
     //private static final long serialVersionUID = 1L;
 
-    public enum Category {
+    public enum category {
         Prep,
         Storing,
         Cooking,
@@ -28,17 +28,17 @@ public class Tip {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
-    protected Category category;
+    protected category category;
     @Column(length = 4096)
     protected String cookingTips;
 
     public Tip() {
         this.id = Long.MAX_VALUE;
-        this.category = Category.Others;
+        this.category = category.Others;
         this.cookingTips = cookingTips;
     }
 
-    public Tip(Long id, Category category, String cookingTips) {
+    public Tip(Long id, category category, String cookingTips) {
         this.id = id;
         this.category = category;
         this.cookingTips = cookingTips;
@@ -62,14 +62,14 @@ public class Tip {
     /**
      * @return the category
      */
-    public Category getCategory() {
+    public category getCategory() {
         return category;
     }
 
     /**
      * @param set the category
      */
-    public void setCategory(Category category) {
+    public void setCategory(category category) {
         this.category = category;
     }
 

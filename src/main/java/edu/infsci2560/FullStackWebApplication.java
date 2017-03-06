@@ -4,7 +4,7 @@ import edu.infsci2560.models.Recipe;
 import edu.infsci2560.models.Recipe.recipeType;
 import edu.infsci2560.repositories.RecipeRepository;
 import edu.infsci2560.models.Tip;
-import edu.infsci2560.models.Tip.Category;
+import edu.infsci2560.models.Tip.category;
 import edu.infsci2560.repositories.TipRepository;
 
 import org.slf4j.Logger;
@@ -28,8 +28,8 @@ public class FullStackWebApplication {
         recipeRepository.save(new Recipe(3L, "Hot Wings", recipeType.MeatLover, "Fry coated wings in hot oil for 10 to 15 minutes. Place wings and add hot sauce mixture."));
         
         TipRepository tipRepository = ctx.getBean(TipRepository.class);
-        tipRepository.save(new Tip(1L, Category.Prep, "Use two bowls to cut corn off the cob without getting kernels everywhere."));
-        tipRepository.save(new Tip(2L, Category.Cooking, "Pre-soak pasta and it will cook in about 60 seconds."));
+        tipRepository.save(new Tip(1L, category.Prep, "Use two bowls to cut corn off the cob without getting kernels everywhere."));
+        tipRepository.save(new Tip(2L, category.Cooking, "Pre-soak pasta and it will cook in about 60 seconds."));
     }
 }
 

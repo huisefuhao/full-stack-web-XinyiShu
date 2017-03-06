@@ -11,6 +11,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Entity
 public class Recipe {
+    
     public enum recipeType {
         Unknown,
         MeatLover,
@@ -20,7 +21,6 @@ public class Recipe {
         SuperMuscle,
         Alcoholic
     }
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
