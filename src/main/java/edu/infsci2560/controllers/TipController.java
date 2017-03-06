@@ -24,15 +24,15 @@ public class TipController {
     @Autowired
     private TipRepository repository;
     
-    @RequestMapping(value = "tips", method = RequestMethod.GET)
+    @RequestMapping(value = "tip", method = RequestMethod.GET)
     public ModelAndView index() {        
-        return new ModelAndView("tips", "tips", repository.findAll());
+        return new ModelAndView("tip", "tip", repository.findAll());
     }
     
-    @RequestMapping(value = "tips/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    @RequestMapping(value = "tip/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Tip tip, BindingResult result) {
         repository.save(tip);
-        return new ModelAndView("tips", "tips", repository.findAll());
+        return new ModelAndView("tip", "tip", repository.findAll());
     }
     
 }
