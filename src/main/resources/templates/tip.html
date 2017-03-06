@@ -13,7 +13,7 @@
                     <th>Category</th>
                     <th>Cooking Tips</th>
                 </tr>                
-                <tr data-th-each="Tip : ${tips}">
+                <tr data-th-each="Tip : ${tip}">
                     <td data-th-text="${Tip.id}"></td>
                     <td data-th-text="${Tip.category}"></td>
                     <td data-th-text="${Tip.cookingTips}"></td>
@@ -33,6 +33,9 @@
             Cooking Tips: <input type="text" name="cookingTips" /><br />
             <input type="submit" value="Add Tips"/>
         </form>
+        
+        <hr />
+        <div>Go back to <a data-th-href="@{/recipe}">recipes</a> ! </div>
         
         <hr />       
         <form data-th-action="@{/logout}" method="post">
