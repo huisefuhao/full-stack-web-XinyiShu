@@ -25,18 +25,14 @@
         
         <hr />
         Post your masterpiece <br />
-        <form data-th-action="@{/masterpiece/add}" name="addMasterpieceForm" method="post" enctype="multipart/form-data>
+        <form data-th-action="@{/masterpiece/add}" name="addMasterpieceForm" method="post" >
             Tag:<br />
             <input type="radio" name="tag" value="Others" checked="checked" /> Others<br />
             <input type="radio" name="tag" value="FamilyMeal" /> FamilyMeal<br />
             <input type="radio" name="tag" value="ValentineAtHome" /> ValentineAtHome<br />
             <input type="radio" name="tag" value="SimpleButTasty" /> SimpleButTasty<br />
             <input type="radio" name="tag" value="FitnessMeal" /> FitnessMeal<br />
-            Date: <input type="text" name="date" /><br />
-            <input type="file" name="file" size="50" />
-            <br />
-            <input type="submit" value="Upload File" />
-            
+            Date: <input type="text" name="date" /><br />            
             <input type="submit" value="Add Your Masterpiece"/>
         </form>
         
