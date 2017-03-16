@@ -12,13 +12,11 @@
                     <th>ID</th>
                     <th>Tag</th>
                     <th>Date</th>
-                    <th>Image</th>
                 </tr>                
                 <tr data-th-each="Masterpiece : ${masterpiece}">
                     <td data-th-text="${Masterpiece.id}"></td>
                     <td data-th-text="${Masterpiece.tag}"></td>
                     <td data-th-text="${Masterpiece.date}"></td>
-                    <td data-th-text="${Masterpiece.path}"></td>
                 </tr>
             </table>
         </div>
