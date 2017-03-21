@@ -3,7 +3,7 @@
 
 ## Brief intro
 1. What is the proposed name for your Web application?
-Masterchef
+Masterchef Recipe
 2. Who is the target audience for your Web application?
 People who want to learn how to cook and who enjoy homemade gourmet food. 
 3. What problem is it intended to solve for the target audience?
