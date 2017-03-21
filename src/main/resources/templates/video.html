@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Share Videos</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">Share interesting videos!</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                </tr>                
+                <tr data-th-each="Video : ${video}">
+                    <td data-th-text="${Video.id}"></td>
+                    <td data-th-text="${Video.description}"></td>
+                    <td data-th-text="${Video.link}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Post your discovery <br />
+        <form data-th-action="@{/video/add}" name="addVideoForm" method="post">
+            Description: <input type="text" name="description" /><br />
+            Link to watch it: <input type="text" name="link" /><br />
+            <input type="submit" value="Add video"/>
+        </form>
+        
+        <hr />
+        <div>Go back to <a data-th-href="@{/recipe}">recipes</a> ! </div>
+        
+        <hr />       
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>

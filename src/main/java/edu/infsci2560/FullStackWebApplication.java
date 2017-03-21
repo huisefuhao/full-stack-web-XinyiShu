@@ -10,6 +10,8 @@ import edu.infsci2560.models.Tip.category;
 import edu.infsci2560.repositories.TipRepository;
 import edu.infsci2560.models.Good;
 import edu.infsci2560.repositories.GoodRepository;
+import edu.infsci2560.models.Video;
+import edu.infsci2560.repositories.VideoRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,6 +48,16 @@ public class FullStackWebApplication {
             goodRepository.save(new Good(1L, "Food processor", "KitchenAid", link1));
             goodRepository.save(new Good(2L, "Coffee maker", "Keurig", link2));
             goodRepository.save(new Good(3L, "Food scale", "Ozeri", link3));
+        }catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        
+        VideoRepository videoRepository = ctx.getBean(VideoRepository.class);
+        try{
+            URL link1 = new URL("https://www.youtube.com/watch?v=uBj-NriY_pQ");
+            URL link2 = new URL("https://www.youtube.com/watch?v=qKqj85oo2wI");
+            videoRepository.save(new Video(1L, "Vanilla Cheesecake by Gordon ramsay", link1));
+            videoRepository.save(new Video(2L, "Chef's Table trailer", link2));
         }catch (MalformedURLException e) {
             e.printStackTrace();
         }
