@@ -3,10 +3,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-
+## [v1.4] - 2017-03-22
+e5d2b9bc1a448f4ed61a054c7d0d5314abb5539e
+### Added
+- create Tip entity and add corresponding controller, repo, service and view for it
+- create Good entity and add corresponding controller, repo, service and view for it
+- create Video entity and add corresponding controller, repo, service and view for it
+- add file upload system by creating a storage package, file upload controller and a new page
+### fixed
+- my workspace crashed during this assignment, so I created a new workspace and a new app
+- fixed several bugs along the way
 
 ## [v1.3.1] - 2017-02-19
-
 ### Added
 - add images to recipe page
 - add style to home page
@@ -22,6 +30,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Create a MVC Controller and implement get and post methods
 - Create a MVC Page and wire it to my RecipeRepository
 
+
 ## [v1.2] - 2017-01-26
 ### Added
 - Answered in README.md
@@ -31,12 +40,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
     - How will it meet the minimum project requirements?
     - Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
 
+
 ## [v1.1] - 2017-01-19
 ### Added
 - Cloned, configured, and compiled the scaffold project.
 - Configured developer workspace.
 - Deployed to Heroku.
 
+[v1.4]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.4...v1.3.1
 [v1.3.1]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.3.1...v1.3.0
 [v1.3.0]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.3.0...v1.2
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.1...v1.2
