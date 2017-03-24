@@ -48,8 +48,8 @@ public class RecipeService {
     }
 
     @RequestMapping(method = RequestMethod.DELETE, consumes="application/json", produces = "application/json")
-    public void delete(@RequestBody Recipe recipe) {
-        repository.delete(recipe);
+    public void delete(@RequestBody long id) {
+        repository.delete(repository.findOne(id));
     }
     
 }

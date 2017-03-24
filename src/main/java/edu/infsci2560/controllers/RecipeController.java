@@ -36,8 +36,8 @@ public class RecipeController {
     }
     
     @RequestMapping(value = "recipe/delete", method = RequestMethod.DELETE, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView delete(@ModelAttribute @Valid Recipe recipe) {
-        repository.delete(recipe);
+    public ModelAndView delete(@ModelAttribute @Valid long id) {
+        repository.delete(repository.findOne(id));
         return new ModelAndView("recipe", "recipe", repository.findAll());
     }
 }
