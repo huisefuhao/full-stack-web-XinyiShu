@@ -38,6 +38,22 @@
             Procedure: <input type="text" name="procedure" /><br />
             <input type="submit" value="Add Recipe"/>
         </form>
+
+        <hr />
+        Delete Recipe<br />
+        <form data-th-action="@{/recipe/delete}" name="deleteRecipeForm" method="delete">
+            Title: <input type="text" name="title" /><br />
+            Recipe Type:<br />
+            <input type="radio" name="recipeType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="recipeType" value="MeatLover" /> MeatLover<br />
+            <input type="radio" name="recipeType" value="Vegetarian" /> Vegetarian<br />
+            <input type="radio" name="recipeType" value="Baker" /> Baker<br />
+            <input type="radio" name="recipeType" value="Alcoholic" /> Alcoholic<br />
+            <input type="radio" name="recipeType" value="SweetTooth" /> SweetTooth<br />
+            <input type="radio" name="recipeType" value="InstantGourmet" /> InstantGourmet<br />
+            Procedure: <input type="text" name="procedure" /><br />
+            <input type="submit" value="Delete Recipe"/>
+        </form>
         
         <hr />
         <div>Go back to <a data-th-href="@{/main}">main page</a> ! </div>
