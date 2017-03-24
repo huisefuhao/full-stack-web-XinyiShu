@@ -48,8 +48,10 @@ public class RecipeService {
     }
 
     @RequestMapping(method = RequestMethod.DELETE, consumes="application/json", produces = "application/json")
-    public void delete(@RequestBody long id) {
+    public void delete(@PathVariable("id") Long id) {
+        //HttpHeaders headers = new HttpHeaders();
         repository.delete(repository.findOne(id));
+        //return new ResponseEntity<>(repository.findAll(recipe), headers, HttpStatus.OK);
     }
     
 }
