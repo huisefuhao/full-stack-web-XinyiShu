@@ -5,23 +5,6 @@
     </head>
     <body>
         <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s wonderful recipes!</h1>
-
-        <div>
-            <table style="border: 1px solid black">
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Recipe Type</th>
-                    <th>Recipe Procedure</th>
-                </tr>                
-                <tr data-th-each="Recipe : ${recipe}">
-                    <td data-th-text="${Recipe.id}"></td>
-                    <td data-th-text="${Recipe.title}"></td>
-                    <td data-th-text="${Recipe.recipeType}"></td>
-                    <td data-th-text="${Recipe.procedure}"></td>
-                </tr>
-            </table>
-        </div>
         
         <hr />
         Add Recipe<br />
