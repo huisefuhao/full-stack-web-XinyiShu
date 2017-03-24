@@ -38,13 +38,6 @@
             Procedure: <input type="text" name="procedure" /><br />
             <input type="submit" value="Add Recipe"/>
         </form>
-
-        <hr />
-        Delete Recipe<br />
-        <form data-th-action="@{/recipe/delete}" name="deleteRecipeForm" method="delete">
-            Recipe ID:<br />
-            <input type="submit" value="Delete Recipe"/>
-        </form>
         
         <hr />
         <div>Go back to <a data-th-href="@{/main}">main page</a> ! </div>
