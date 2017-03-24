@@ -46,5 +46,10 @@ public class RecipeService {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.save(recipe), headers, HttpStatus.OK);
     }
+
+    @RequestMapping(method = RequestMethod.DELETE, consumes="application/json", produces = "application/json")
+    public void delete(@RequestBody long id) {
+        repository.delete(repository.findOne(id));
+    }
     
 }
