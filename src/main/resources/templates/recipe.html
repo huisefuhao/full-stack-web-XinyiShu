@@ -39,11 +39,19 @@
             <input type="submit" value="Add Recipe"/>
         </form>
 
-        <hr />
+        <!--<hr />
         Delete Recipe<br />
         <form data-th-action="@{/recipe/delete}" name="deleteRecipeForm" method="delete">
             Recipe ID: <input type="text" name="id" /><br />
             <input type="submit" value="Delete Recipe"/>
+        </form>
+        -->
+        
+        <hr />
+        Delete Recipe<br />
+        <form data-th-action="@{/recipe/delete}" name="deleteRecipe" method="delete">
+            Input the recipe id that you want to delete: <input type="text" name="id" /><br /> 
+            <input type="submit" value="Delete recipe"/>
         </form>
         
         <hr />

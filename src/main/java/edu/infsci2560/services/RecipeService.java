@@ -47,11 +47,11 @@ public class RecipeService {
         return new ResponseEntity<>(repository.save(recipe), headers, HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, consumes="application/json", produces = "application/json")
-    public void delete(@PathVariable("id") Long id) {
-        //HttpHeaders headers = new HttpHeaders();
-        repository.delete(repository.findOne(id));
-        //return new ResponseEntity<>(repository.findAll(recipe), headers, HttpStatus.OK);
-    }
+//    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
+//    public void delete(@PathVariable("id") Long id) {
+//        //HttpHeaders headers = new HttpHeaders();
+//        //return new ResponseEntity<>(repository.findAll(recipe), headers, HttpStatus.OK);
+//        repository.delete(repository.findOne(id));
+//    }
     
 }
