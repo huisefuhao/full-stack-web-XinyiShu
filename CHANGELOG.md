@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [v1.4.2] - 2017-03-22
+e33211a8d2ba7072bf4ee537ab2ad4b066a1bd0b
+### Added
+- add a main page
+- add delete function to recipe page
+### modified
+- change the webpage workflow for better stoty telling
+
 ## [v1.4] - 2017-03-22
 e5d2b9bc1a448f4ed61a054c7d0d5314abb5539e
 ### Added
@@ -47,8 +55,9 @@ e5d2b9bc1a448f4ed61a054c7d0d5314abb5539e
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[v1.4]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.4...v1.3.1
-[v1.3.1]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.3.1...v1.3.0
-[v1.3.0]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.3.0...v1.2
+[v1.4.2]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.4...v1.4.2
+[v1.4]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.3.1...v1.4
+[v1.3.1]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.3.0...v1.3.1
+[v1.3.0]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.2...v1.3.0
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/...v1.1
