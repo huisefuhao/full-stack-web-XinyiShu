@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -30,16 +31,16 @@ public class RecipeController {
         return new ModelAndView("recipe", "recipe", repository.findAll());
     }
     
+    @RequestMapping(value = "recipe/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("recipe", "recipe", repository.findOne(id));
+    }
+    
     @RequestMapping(value = "recipe/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Recipe recipe, BindingResult result) {
         repository.save(recipe);
         return new ModelAndView("recipe", "recipe", repository.findAll());
     }
-    
-//    @RequestMapping(value = "recipe/delete", method = RequestMethod.DELETE, consumes="application/x-www-form-urlencoded", produces = "application/json")
-//    public ModelAndView delete(@ModelAttribute Long id) {
-//        repository.delete(repository.findOne(id));
-//        return new ModelAndView("recipe", "recipe", repository.findAll());
 
     @RequestMapping(value = "recipe/delete", method = RequestMethod.GET)
     public ModelAndView delete(@RequestParam(value="id", required=true) Long id) {

@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import javax.validation.Valid;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
@@ -41,17 +44,19 @@ public class RecipeService {
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Recipe> create(@RequestBody Recipe recipe) {
-        HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(recipe), headers, HttpStatus.OK);
-    }
-
-//    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
-//    public void delete(@PathVariable("id") Long id) {
-//        //HttpHeaders headers = new HttpHeaders();
-//        //return new ResponseEntity<>(repository.findAll(recipe), headers, HttpStatus.OK);
-//        repository.delete(repository.findOne(id));
+//    @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
+//    public ResponseEntity<Recipe> create(@RequestBody Recipe recipe) {
+//        HttpHeaders headers = new HttpHeaders();
+//        return new ResponseEntity<>(repository.save(recipe), headers, HttpStatus.OK);
 //    }
+
+    @RequestMapping(value = "recipe/{id}", 
+            method = RequestMethod.DELETE, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public ModelAndView delete( @Valid Recipe recipe, BindingResult result) {
+        repository.delete(recipe);
+        return new ModelAndView("recipe", "recipe", repository.findAll());
+    }   
     
 }
