@@ -51,7 +51,7 @@ public class RecipeController {
         return new ModelAndView("recipe", "recipe", repository.findOne(id));
     }
     
-    @RequestMapping(value = "dvds/{id}", 
+    @RequestMapping(value = "recipe/{id}", 
             method = RequestMethod.PUT, 
             consumes="application/x-www-form-urlencoded", 
             produces = "application/json")
