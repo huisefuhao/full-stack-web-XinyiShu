@@ -40,12 +40,13 @@
         </form>
         
         
-        
+        <!--
         <hr />
         Edit Recipe<br />
         <form data-th-action="@{/recipe/{id}(id=${recipe.id})}" data-th-object="${recipe}" data-th-method="put" role="form">
             Id: <span data-th-utext="${recipe.id}"/><br />
             <!--ID: <input type="text" name="id" data-th-value="${recipe.id}" /><br />-->
+            <!--
             Title: <input type="text" name="title" data-th-value="${recipe.title}" /><br />
             Recipe Type:<br />
             <div data-th-each="elem: ${T(edu.infsci2560.models.Recipe.recipeType).values()}">
@@ -58,7 +59,7 @@
             Procedure: <input type="text" name="procedure" data-th-value="${recipe.procedure}" /><br />
             <input type="submit" value="Update Recipe"/><br />
         </form>
-        
+        -->
         
         <hr />
         Delete Recipe<br />
