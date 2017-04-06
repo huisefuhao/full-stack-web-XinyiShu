@@ -31,9 +31,20 @@ public class RecipeController {
         return new ModelAndView("recipe", "recipe", repository.findAll());
     }
     
+//    @RequestMapping(value = "recipe/{id}", method = RequestMethod.GET)
+//    public ModelAndView index(@PathVariable Long id) {        
+//        return new ModelAndView("recipe", "recipe", repository.findOne(id));
+//        
+//    }
+
     @RequestMapping(value = "recipe/{id}", method = RequestMethod.GET)
-    public ModelAndView index(@PathVariable Long id) {        
-        return new ModelAndView("recipe", "recipe", repository.findOne(id));
+    public ModelAndView index(@PathVariable Long id) {    
+        ModelAndView mv = new ModelAndView("recipeEdit");
+        Recipe recipe = repository.findOne(id);
+        mv.addObject("recipe", recipe);
+//        mv.addObject("ratings", ratingRepository.findAll());
+//        mv.addObject("ratings", ratingRepository.findByRatingPkDvdId(dvd.getId(), new PageRequest(0, 10)));
+        return mv;
     }
     
     @RequestMapping(value = "recipe/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
