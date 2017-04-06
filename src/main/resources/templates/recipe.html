@@ -43,12 +43,10 @@
         
         <hr />
         Edit Recipe<br />
-        <form>
-            data-th-action="@{/recipe/{id}(id=${recipe.id})}" 
-            data-th-object="${recipe}" 
+        <form data-th-action="@{/recipe/{id}(id=${recipe.id})}" data-th-object="${recipe}" 
             data-th-method="put" 
             role="form">
-            Id: <span data-th-utext="${recipe.id}"></span><br />
+            Id: <span data-th-utext="${recipe.id}"/><br />
             <!--ID: <input type="text" name="id" data-th-value="${recipe.id}" /><br />-->
             Title: <input type="text" name="title" data-th-value="${recipe.title}" /><br />
             Recipe Type:<br />
@@ -57,7 +55,7 @@
                        data-th-name="recipeType" 
                        data-th-value="${elem.name()}" 
                        data-th-checked="${elem} eq ${T(edu.infsci2560.models.Recipe.recipeType).valueOf(recipe.recipeType)}"/>
-                <span data-th-utext="${elem.name()}"></span>
+                <span data-th-utext="${elem.name()}"/>
             </div>
             Procedure: <input type="text" name="procedure" data-th-value="${recipe.procedure}" /><br />
             <input type="submit" value="Update Recipe"/><br />
