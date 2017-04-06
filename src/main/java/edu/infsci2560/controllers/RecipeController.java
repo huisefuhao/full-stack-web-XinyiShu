@@ -50,4 +50,13 @@ public class RecipeController {
         }
         return new ModelAndView("recipe", "recipe", repository.findOne(id));
     }
+    
+    @RequestMapping(value = "dvds/{id}", 
+            method = RequestMethod.PUT, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public String update( @Valid Recipe recipe, BindingResult result) {
+        repository.save(recipe);
+        return "redirect:/recipe";
+    }
 }

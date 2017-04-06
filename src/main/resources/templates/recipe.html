@@ -38,14 +38,30 @@
             Procedure: <input type="text" name="procedure" /><br />
             <input type="submit" value="Add Recipe"/>
         </form>
-
-        <!--<hr />
-        Delete Recipe<br />
-        <form data-th-action="@{/recipe/delete}" name="deleteRecipeForm" method="delete">
-            Recipe ID: <input type="text" name="id" /><br />
-            <input type="submit" value="Delete Recipe"/>
+        
+        
+        
+        <hr />
+        Edit Recipe<br />
+        <form 
+            data-th-action="@{/recipe/{id}(id=${recipe.id})}" 
+            data-th-object="${recipe}" 
+            data-th-method="put" 
+            role="form">
+            Id: <span data-th-utext="${recipe.id}" /><br />
+            Title: <input type="text" name="title" data-th-value="${recipe.title}" /><br />
+            Recipe Type:<br />
+            <div data-th-each="elem: ${T(edu.infsci2560.models.Recipe.recipeType).values()}">
+                <input type="radio" 
+                       data-th-name="recipeType" 
+                       data-th-value="${elem.name()}" 
+                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.Recipe.recipeType).valueOf(recipe.recipeType)}">
+                    <span data-th-utext="${elem.name()}" />
+                </input>
+            </div>
+            <input type="submit" value="Update Recipe"/><br />
         </form>
-        -->
+        
         
         <hr />
         Delete Recipe<br />
