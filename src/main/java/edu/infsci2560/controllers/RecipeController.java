@@ -56,8 +56,8 @@ public class RecipeController {
             method = RequestMethod.PUT, 
             consumes="application/x-www-form-urlencoded", 
             produces = "application/json")
-    public ModelAndView update( @Valid Recipe recipe, BindingResult result) {
+    public String update( @Valid Recipe recipe, BindingResult result) {
         repository.save(recipe);
-        return new ModelAndView("redirect:/recipe");
+        return "redirect:/recipe";
     }
 }
