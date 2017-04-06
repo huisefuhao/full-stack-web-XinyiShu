@@ -56,9 +56,8 @@
                 <input type="radio" 
                        data-th-name="recipeType" 
                        data-th-value="${elem.name()}" 
-                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.Recipe.recipeType).valueOf(recipe.recipeType)}">
+                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.Recipe.recipeType).valueOf(recipe.recipeType)}"/>
                        <!--<span data-th-utext="${elem.name()}"></span>-->
-                </input>
             </div>
             Procedure: <input type="text" name="procedure" data-th-value="${recipe.procedure}" /><br />
             <input type="submit" value="Update Recipe"/><br />
