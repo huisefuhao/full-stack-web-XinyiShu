@@ -48,7 +48,7 @@
             data-th-object="${recipe}" 
             data-th-method="put" 
             role="form">
-            Id: <span data-th-utext="${recipe.id}" /><br />
+            Id: <span data-th-utext="${recipe.id}"></span><br />
             Title: <input type="text" name="title" data-th-value="${recipe.title}" /><br />
             Recipe Type:<br />
             <div data-th-each="elem: ${T(edu.infsci2560.models.Recipe.recipeType).values()}">
@@ -56,7 +56,7 @@
                        data-th-name="recipeType" 
                        data-th-value="${elem.name()}" 
                        data-th-checked="${elem} eq ${T(edu.infsci2560.models.Recipe.recipeType).valueOf(recipe.recipeType)}">
-                    <span data-th-utext="${elem.name()}" />
+                    <span data-th-utext="${elem.name()}"></span>
                 </input>
             </div>
             Procedure: <input type="text" name="procedure" data-th-value="${recipe.procedure}" /><br />
