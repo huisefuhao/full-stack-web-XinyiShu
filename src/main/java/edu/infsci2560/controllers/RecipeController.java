@@ -54,7 +54,7 @@ public class RecipeController {
     @RequestMapping(value = "recipe/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Recipe recipe, BindingResult result) {
         repository.save(recipe);
-        return new ModelAndView("recipe", "recipe", repository.findAll());
+        return new ModelAndView("recipe", "recipes", repository.findAll());
     }
 
     @RequestMapping(value = "recipe/delete", method = RequestMethod.GET)
@@ -63,7 +63,7 @@ public class RecipeController {
         if ( recipe != null ) {
             repository.delete(recipe);
         }
-        return new ModelAndView("recipe", "recipe", repository.findOne(id));
+        return new ModelAndView("recipe", "recipes", repository.findAll());
     }
     
     
