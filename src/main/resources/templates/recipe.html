@@ -14,7 +14,7 @@
                     <th>Recipe Type</th>
                     <th>Recipe Procedure</th>
                 </tr>                
-                <tr data-th-each="Recipe : ${recipe}">
+                <tr data-th-each="Recipe : ${recipes}">
                     <td data-th-text="${Recipe.id}"></td>
                     <td data-th-text="${Recipe.title}"></td>
                     <td data-th-text="${Recipe.recipeType}"></td>
@@ -40,24 +40,25 @@
         </form>
         
         
-
+        <!--
         <hr />
         Edit Recipe<br />
         <form data-th-action="@{/recipe/{id}(id=${recipe.id})}" data-th-object="${recipe}" data-th-method="put" role="form">
-            Id: <span data-th-utext="${recipe.id}"></span><br />
+            Id: <input type="text" name="id" /><br /> 
             Title: <input type="text" name="title" data-th-value="${recipe.title}" /><br />
             Recipe Type:<br />
-            <div data-th-each="elem: ${T(edu.infsci2560.models.Recipe.recipeType).values()}">
+            <div data-th-each="elem: ${T(edu.infsci2560.models.Recipe.RecipeType).values()}">
                 <input type="radio" 
                        data-th-name="recipeType" 
                        data-th-value="${elem.name()}" 
-                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.Recipe.recipeType).valueOf(recipe.recipeType)}">
+                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.Recipe.RecipeType).valueOf(recipe.recipeType)}">
                     <span data-th-utext="${elem.name()}"></span>
                 </input>
-            </div>      
+            </div>
             Procedure: <input type="text" name="procedure" data-th-value="${recipe.procedure}" /><br />
             <input type="submit" value="Update Recipe"/><br />
         </form>
+        -->
 
         
         <hr />

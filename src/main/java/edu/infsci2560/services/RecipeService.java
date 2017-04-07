@@ -1,22 +1,15 @@
 package edu.infsci2560.services;
 
 import edu.infsci2560.models.Recipe;
-import edu.infsci2560.models.Recipe.recipeType;
 import edu.infsci2560.repositories.RecipeRepository;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import javax.validation.Valid;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;

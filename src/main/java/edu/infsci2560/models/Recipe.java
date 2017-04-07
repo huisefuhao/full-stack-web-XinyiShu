@@ -12,7 +12,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Entity
 public class Recipe {
     
-    public enum recipeType {
+    public enum RecipeType {
         Unknown,
         MeatLover,
         Vegetarian, 
@@ -26,7 +26,7 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     protected String title;
-    protected recipeType recipeType;
+    protected RecipeType recipeType;
     @Column(length = 4096)
     //@Column(columnDefinition="TEXT")
     protected String procedure;
@@ -34,11 +34,11 @@ public class Recipe {
     public Recipe() {
         this.id = Long.MAX_VALUE;
         this.title = null;
-        this.recipeType = recipeType.Unknown;
+        this.recipeType = RecipeType.Unknown;
         this.procedure = null;
     }
     
-    public Recipe(Long id, String name, recipeType recipeType, String proc) {
+    public Recipe(Long id, String name, RecipeType recipeType, String proc) {
         this.id = id;
         this.title = name;
         this.recipeType = recipeType;
@@ -68,11 +68,11 @@ public class Recipe {
         this.title = title;
     }
 
-    public recipeType getRecipeType() {
+    public RecipeType getRecipeType() {
         return recipeType;
     }
 
-    public void setRecipeType(recipeType recipeType) {
+    public void setRecipeType(RecipeType recipeType) {
         this.recipeType = recipeType;
     }
     

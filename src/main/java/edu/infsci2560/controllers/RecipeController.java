@@ -4,13 +4,9 @@ import edu.infsci2560.models.Recipe;
 import edu.infsci2560.repositories.RecipeRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,26 +22,34 @@ public class RecipeController {
     @Autowired
     private RecipeRepository repository;
     
+//    @RequestMapping(value = "recipe", method = RequestMethod.GET)
+//    public ModelAndView index() {
+//        ModelAndView mv = new ModelAndView("recipe");
+//        mv.addObject("recipes", repository.findAll());
+//        mv.addObject("recipe", new Recipe());
+//        return mv;
+//    }
+    
     @RequestMapping(value = "recipe", method = RequestMethod.GET)
-    public ModelAndView index() {        
-        return new ModelAndView("recipe", "recipe", repository.findAll());
+    public ModelAndView index() {
+        return new ModelAndView("recipe", "recipes", repository.findAll());
     }
     
-//    @RequestMapping(value = "recipe/{id}", method = RequestMethod.GET)
-//    public ModelAndView index(@PathVariable Long id) {        
-//        return new ModelAndView("recipe", "recipe", repository.findOne(id));
-//        
-//    }
-
     @RequestMapping(value = "recipe/{id}", method = RequestMethod.GET)
-    public ModelAndView index(@PathVariable Long id) {    
-        ModelAndView mv = new ModelAndView("recipeEdit");
-        Recipe recipe = repository.findOne(id);
-        mv.addObject("recipe", recipe);
-//        mv.addObject("ratings", ratingRepository.findAll());
-//        mv.addObject("ratings", ratingRepository.findByRatingPkDvdId(dvd.getId(), new PageRequest(0, 10)));
-        return mv;
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("recipe", "recipe", repository.findOne(id));
+        
     }
+
+//    @RequestMapping(value = "recipe/{id}", method = RequestMethod.GET)
+//    public ModelAndView index(@PathVariable Long id) {    
+//        ModelAndView mv = new ModelAndView("recipeEdit");
+//        Recipe recipe = repository.findOne(id);
+//        mv.addObject("recipe", recipe);
+////        mv.addObject("ratings", ratingRepository.findAll());
+////        mv.addObject("ratings", ratingRepository.findByRatingPkDvdId(dvd.getId(), new PageRequest(0, 10)));
+//        return mv;
+//    }
     
     @RequestMapping(value = "recipe/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Recipe recipe, BindingResult result) {
@@ -63,12 +67,12 @@ public class RecipeController {
     }
     
     
-    @RequestMapping(value = "recipe/{id}", 
-            method = RequestMethod.PUT, 
-            consumes="application/x-www-form-urlencoded", 
-            produces = "application/json")
-    public String update( @Valid Recipe recipe, BindingResult result) {
-        repository.save(recipe);
-        return "redirect:/recipe";
-    }
+//    @RequestMapping(value = "recipe/{id}", 
+//            method = RequestMethod.PUT, 
+//            consumes="application/x-www-form-urlencoded", 
+//            produces = "application/json")
+//    public String update( @Valid Recipe recipe, BindingResult result) {
+//        repository.save(recipe);
+//        return "redirect:/recipe";
+//    }
 }
