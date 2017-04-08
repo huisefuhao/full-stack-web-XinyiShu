@@ -41,7 +41,7 @@
             <input type="radio" name="recipeType" value="SweetTooth" /> SweetTooth<br />
             <input type="radio" name="recipeType" value="InstantGourmet" /> InstantGourmet<br />
             Procedure: <input type="text" name="procedure" /><br />
-            <input type="submit" value="Add Recipe"/>
+            <input type="submit" class="btn btn-success" value="Add Recipe"/>
         </form>
         
         
@@ -70,7 +70,7 @@
         Delete Recipe<br />
         <form data-th-action="@{/recipe/delete}" name="deleteRecipe" method="delete">
             Input the recipe id that you want to delete: <input type="text" name="id" /><br /> 
-            <input type="submit" value="Delete recipe"/>
+            <input type="submit" class="btn btn-danger" value="Delete recipe"/>
         </form>
         
         <hr />
@@ -78,7 +78,7 @@
         
         <hr />       
         <form data-th-action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
+            <input type="submit" class="btn btn-warning" value="Sign Out"/>
         </form>
     </body>
 </html>

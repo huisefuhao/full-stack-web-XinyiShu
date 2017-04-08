@@ -7,10 +7,72 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                width: 70%;
+                margin: auto;
+            }
+        </style>
     </head>
+    
     <body>
-        <h1 data-th-inline="text">Hello, [[${#httpServletRequest.remoteUser}]]. And bon appétit！</h1>
+      <h1 data-th-inline="text">Hello, [[${#httpServletRequest.remoteUser}]]. And bon appétit！</h1>
 
+      <div class="container">
+        <br />
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="http://mexcalcuisine.com/wp-content/uploads/2014/05/gourmet-tacos-mexcal.jpg" alt="Taco" width="800" height="400" />
+                </div>
+
+                <div class="item">
+                    <img src="http://www.thechameleonbham.co.uk/website/wp-content/uploads/2016/07/cocktail.jpg" alt="Cocktail" width="800" height="400" />
+                </div>
+    
+                <div class="item">
+                    <img src="http://www.30poundsofapples.com/wp-content/uploads/2012/07/Pretty-dessert.jpg" alt="Pastry" width="800" height="400" />
+                </div>
+
+                <div class="item">
+                    <img src="http://inout-home.hu/wp-content/uploads/2016/11/steak.jpg" alt="Steak" width="800" height="400" />
+                </div>
+
+                <div class="item">
+                    <img src="https://www.gordonramsayrestaurants.com/assets/Carousels/_resampled/CroppedFocusedImage121578650-50-Tablet-0017-rgr-homepage-carousel-4.jpg" alt="Fish" width="800" height="400" />
+                </div>
+                
+                <div class="item">
+                    <img src="http://manhattanpizzaplacehga.com/wp-content/uploads/2016/03/wafswectpmbr0zmug9ly.jpg" alt="Pizza" width="800" height="400" />
+                </div>
+                
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+      </div>
+
+<!--
         <img src="http://mexcalcuisine.com/wp-content/uploads/2014/05/gourmet-tacos-mexcal.jpg" style="width:400px;height:240px;"/>
         <img src="http://www.thechameleonbham.co.uk/website/wp-content/uploads/2016/07/cocktail.jpg" style="width:400px;height:240px;"/>
         <img src="http://www.30poundsofapples.com/wp-content/uploads/2012/07/Pretty-dessert.jpg" style="width:400px;height:240px;"/>
@@ -18,21 +80,119 @@
         <img src="https://www.gordonramsayrestaurants.com/assets/Carousels/_resampled/CroppedFocusedImage121578650-50-Tablet-0017-rgr-homepage-carousel-4.jpg" style="width:400px;height:240px;"/>
         <img src="http://manhattanpizzaplacehga.com/wp-content/uploads/2016/03/wafswectpmbr0zmug9ly.jpg" style="width:400px;height:240px;"/>
 
+-->
         <hr />
-        <div>Find more wonderful recipes <a data-th-href="@{/recipe}">here</a> ! </div>
+        <div class="container">
+            Find more wonderful recipes <a data-th-href="@{/recipe}">here</a> ! 
+            
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">more info</button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+    
+                <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Recipe secion</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>You can discover many amazing recipes here and share your own here with outhers. </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Got it!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
         
         <hr />
-        <div>Find out useful cooking tips <a data-th-href="@{/tip}">here</a> ! </div>
+        <div class="container">
+            Find out useful cooking tips <a data-th-href="@{/tip}">here</a> ! 
+            
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal1">more info</button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" role="dialog">
+                <div class="modal-dialog">
+    
+                <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Tip secion</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>You can find out many interesting and helpful cooking tips in this section. Also, share your experience with us! </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Got it!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+    
+        </div>
 
         <hr />
-        <div>Find out good staff in kitchen <a data-th-href="@{/good}">here</a> ! </div>
+        <div class="container">
+            Find out good staff in kitchen <a data-th-href="@{/good}">here</a> ! 
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal2">more info</button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog">
+    
+                <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Goods secion</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Take others' advice and try these kitchen helpers. Make cooking an enjoyable experience. </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Got it!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
         
         <hr />
-        <div><a data-th-href="@{/masterpiece}">Share</a> your masterpiece with us! </div>
+        <div class="container">
+            <a data-th-href="@{/masterpiece}">Share</a> your masterpiece with us! 
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal3">more info</button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal3" role="dialog">
+                <div class="modal-dialog">
+    
+                <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Masterpiece secion</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Just treat yourself with a wonderful homemade meal? Post some pics and share your happiness with us! </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Got it!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
         
         <hr />       
         <form data-th-action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
+            <input type="submit" class="btn btn-warning" value="Sign Out"/>
         </form>
     </body>
 </html>

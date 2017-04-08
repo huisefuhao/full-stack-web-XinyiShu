@@ -31,7 +31,7 @@
         <form data-th-action="@{/video/add}" name="addVideoForm" method="post">
             Description: <input type="text" name="description" /><br />
             Link to watch it: <input type="text" name="link" /><br />
-            <input type="submit" value="Add video"/>
+            <input type="submit" class="btn btn-success" value="Add video"/>
         </form>
         
         <hr />
@@ -39,7 +39,7 @@
         
         <hr />       
         <form data-th-action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
+            <input type="submit" class="btn btn-warning" value="Sign Out"/>
         </form>
     </body>
 </html>
