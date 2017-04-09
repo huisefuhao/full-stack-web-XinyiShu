@@ -1,6 +1,6 @@
 # Masterchef
 
-## Brief intro
+## Brief Intro
 1. What is the proposed name for your Web application?
 - Masterchef Recipe
 2. Who is the target audience for your Web application?
@@ -13,7 +13,7 @@
 - This is an integrated web site, where users can find all kinds of useful information related to cooking. I can document what you have made and what you have published in the past to show your progress and beautiful memory with food. 
 
 
-## Build status
+## Build Status
 Modify to match your project specific Travis Build
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-XinyiShu)
 
@@ -27,9 +27,10 @@ Modify to match your project specific Travis Build
 
 
 ## Key Features
-TODO : Please list key features of your project.
 * User login
 * Add new entries like recipes and tips by users
+* Delete existing entries by users
+* Update info in existing entries by users
 * Different sections
 * Upload files to the database by users
 
@@ -37,12 +38,22 @@ TODO : Please list key features of your project.
 ## Project Details
 TODO: add more detailed screenshots
 ### Landing Page
-There is a welcome page. Users can click "find a recipe" to jump to login page. After verifying user information, the web will jump to my main page, recipe, where users can add new recipes. 
+There is a welcome page. Users can click "Enter" to jump to login page. After verifying user information, the web will jump to the main page, where users can find out several useful sections. 
 <img src="https://github.com/infsci2560sp17/full-stack-web-XinyiShu/blob/master/src/main/resources/welcome.png">
 
-### User Input Form
-Users can add their own recipes by entering recipe titles and choosing a category of this dish. When the editing is done, user can upload their recipes to databse and recipes will be displayed on the table above. 
-<img src="https://github.com/infsci2560sp17/full-stack-web-XinyiShu/blob/master/src/main/resources/inputform.png">
+### User Login
+This is the login page. Return users can log in while new users can choose to sign up here. 
+<img src="https://github.com/infsci2560sp17/full-stack-web-XinyiShu/blob/master/src/main/resources/login.png">
+
+### Main Page
+
+### Recipe Section
+
+### Tip Section
+
+### Good Section
+
+### Masterpiece Section
 
 
 ## API
