@@ -44,6 +44,14 @@ public class RecipeService {
     public ModelAndView delete( @Valid Recipe recipe, BindingResult result) {
         repository.delete(recipe);
         return new ModelAndView("recipe", "recipes", repository.findAll());
-    }   
+    }
+    
+//    @RequestMapping(value = "recipes/edit/{id}", 
+//            method = RequestMethod.GET, 
+//            consumes="application/x-www-form-urlencoded", 
+//            produces = "application/json")
+//    public ModelAndView edit( @Valid Recipe recipe, Long id) {
+//        return new ModelAndView("recipe", "recipes", repository.findOne(id));
+//    } 
     
 }

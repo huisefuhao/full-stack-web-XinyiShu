@@ -22,14 +22,6 @@ public class RecipeController {
     @Autowired
     private RecipeRepository repository;
     
-//    @RequestMapping(value = "recipe", method = RequestMethod.GET)
-//    public ModelAndView index() {
-//        ModelAndView mv = new ModelAndView("recipe");
-//        mv.addObject("recipes", repository.findAll());
-//        mv.addObject("recipe", new Recipe());
-//        return mv;
-//    }
-    
     @RequestMapping(value = "recipe", method = RequestMethod.GET)
     public ModelAndView index() {
         return new ModelAndView("recipe", "recipes", repository.findAll());
@@ -40,16 +32,6 @@ public class RecipeController {
         return new ModelAndView("recipe", "recipe", repository.findOne(id));
         
     }
-
-//    @RequestMapping(value = "recipe/{id}", method = RequestMethod.GET)
-//    public ModelAndView index(@PathVariable Long id) {    
-//        ModelAndView mv = new ModelAndView("recipeEdit");
-//        Recipe recipe = repository.findOne(id);
-//        mv.addObject("recipe", recipe);
-////        mv.addObject("ratings", ratingRepository.findAll());
-////        mv.addObject("ratings", ratingRepository.findByRatingPkDvdId(dvd.getId(), new PageRequest(0, 10)));
-//        return mv;
-//    }
     
     @RequestMapping(value = "recipe/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Recipe recipe, BindingResult result) {
@@ -66,13 +48,10 @@ public class RecipeController {
         return new ModelAndView("recipe", "recipes", repository.findAll());
     }
     
-    
-//    @RequestMapping(value = "recipe/{id}", 
-//            method = RequestMethod.PUT, 
-//            consumes="application/x-www-form-urlencoded", 
-//            produces = "application/json")
-//    public String update( @Valid Recipe recipe, BindingResult result) {
-//        repository.save(recipe);
-//        return "redirect:/recipe";
+//    @RequestMapping(value = "recipes/edit/{id}", method = RequestMethod.GET)
+//    public ModelAndView edit(@RequestParam(value="id", required=true) Long id) {
+////        Recipe recipe = repository.findOne(id);  
+//        return new ModelAndView("recipe", "recipes", repository.findOne(id));
 //    }
+    
 }

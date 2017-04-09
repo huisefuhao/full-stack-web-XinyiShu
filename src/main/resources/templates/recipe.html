@@ -7,6 +7,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style type = "text/css">
+            body,h1{
+                font-family: "Comic Sans MS",sans-serif
+            }
+            body{
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
@@ -14,7 +22,7 @@
         </div>
         
         <div class="container">
-            <table style="border: 1px solid black" class="table table-hover">
+            <table align="center" style="border: 1px solid black" class="table table-hover">
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
@@ -26,6 +34,7 @@
                     <td data-th-text="${Recipe.title}"></td>
                     <td data-th-text="${Recipe.recipeType}"></td>
                     <td data-th-text="${Recipe.procedure}"></td>
+                    <td><a data-th-href="@{/recipes/edit/{id}(id=${Recipe.id})}">edit</a></td>
                 </tr>
             </table>
         </div>
@@ -44,38 +53,27 @@
                 <input type="radio" name="recipeType" value="SweetTooth" /> SweetTooth<br />
                 <input type="radio" name="recipeType" value="InstantGourmet" /> InstantGourmet<br />
                 Procedure: <input type="text" name="procedure" /><br />
+                <br />
                 <input type="submit" class="btn btn-success" value="Add Recipe"/>
             </form>
         </div>
         
-        
-        <!--
-        <hr />
-        Edit Recipe<br />
-        <form data-th-action="@{/recipe/{id}(id=${recipe.id})}" data-th-object="${recipe}" data-th-method="put" role="form">
-            Id: <input type="text" name="id" /><br /> 
-            Title: <input type="text" name="title" data-th-value="${recipe.title}" /><br />
-            Recipe Type:<br />
-            <div data-th-each="elem: ${T(edu.infsci2560.models.Recipe.RecipeType).values()}">
-                <input type="radio" 
-                       data-th-name="recipeType" 
-                       data-th-value="${elem.name()}" 
-                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.Recipe.RecipeType).valueOf(recipe.recipeType)}">
-                    <span data-th-utext="${elem.name()}"></span>
-                </input>
-            </div>
-            Procedure: <input type="text" name="procedure" data-th-value="${recipe.procedure}" /><br />
-            <input type="submit" value="Update Recipe"/><br />
-        </form>
-        -->
-
+        <!--<hr />
+        <div class="container">
+            Edit Recipe<br />
+            <form data-th-action="@{recipe/edit/{id}}" name="editRecipe" method="edit">
+                Input the recipe id that you want to edit: <input type="text" name="id" /><br /> 
+                <input type="submit" class="btn btn-success" value="Edit Recipe" data-th-href="@{/recipeEdit}"/>
+            </form>
+        </div>-->
         
         <hr />
         <div class="container">
             Delete Recipe<br />
             <form data-th-action="@{/recipe/delete}" name="deleteRecipe" method="delete">
                 Input the recipe id that you want to delete: <input type="text" name="id" /><br /> 
-                <input type="submit" class="btn btn-danger" value="Delete recipe"/>
+                <br />
+                <input type="submit" class="btn btn-danger" value="Delete Recipe"/>
             </form>
         </div>
         
