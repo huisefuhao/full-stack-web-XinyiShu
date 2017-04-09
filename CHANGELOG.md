@@ -69,6 +69,7 @@ e5d2b9bc1a448f4ed61a054c7d0d5314abb5539e
 - Configured developer workspace.
 - Deployed to Heroku.
 
+[v1.5.1]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.5.0...v1.5.1
 [v1.5.0]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.4.2...v1.5.0
 [v1.4.2]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.4...v1.4.2
 [v1.4]: https://github.com/infsci2560sp17/full-stack-web-XinyiShu/compare/v1.3.1...v1.4
