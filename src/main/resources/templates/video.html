@@ -9,9 +9,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1 data-th-inline="text">Share interesting videos!</h1>
+        <div class="container">
+            <h1 data-th-inline="text">Share interesting videos!</h1>
+        </div>
 
-        <div>
+        <div class="container">
             <table style="border: 1px solid black" class="table table-hover">
                 <tr>
                     <th>ID</th>
@@ -27,19 +29,25 @@
         </div>
         
         <hr />
-        Post your discovery <br />
-        <form data-th-action="@{/video/add}" name="addVideoForm" method="post">
-            Description: <input type="text" name="description" /><br />
-            Link to watch it: <input type="text" name="link" /><br />
-            <input type="submit" class="btn btn-success" value="Add video"/>
-        </form>
+        <div class="container">
+            Post your discovery <br />
+            <form data-th-action="@{/video/add}" name="addVideoForm" method="post">
+                Description: <input type="text" name="description" /><br />
+                Link to watch it: <input type="text" name="link" /><br />
+                <input type="submit" class="btn btn-success" value="Add video"/>
+            </form>
+        </div>
         
         <hr />
-        <div>Go back to <a data-th-href="@{/main}">main page</a> ! </div>
+        <div class="container">
+            Go back to <a data-th-href="@{/main}">main page</a> ! 
+        </div>
         
-        <hr />       
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" class="btn btn-warning" value="Sign Out"/>
-        </form>
+        <hr />
+        <div class="container">
+            <form data-th-action="@{/logout}" method="post">
+                <input type="submit" class="btn btn-warning" value="Sign Out"/>
+            </form>
+        </div>
     </body>
 </html>

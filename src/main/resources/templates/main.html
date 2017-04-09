@@ -10,14 +10,17 @@
         <style>
             .carousel-inner > .item > img,
             .carousel-inner > .item > a > img {
-                width: 70%;
+                height: 555px;
+                width: 80%;
                 margin: auto;
             }
         </style>
     </head>
     
     <body>
-      <h1 data-th-inline="text">Hello, [[${#httpServletRequest.remoteUser}]]. And bon appétit！</h1>
+        <div class="container">
+            <h1 data-th-inline="text">Hello, [[${#httpServletRequest.remoteUser}]]. And bon appétit！</h1>
+        </div>
 
       <div class="container">
         <br />
@@ -35,7 +38,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="http://mexcalcuisine.com/wp-content/uploads/2014/05/gourmet-tacos-mexcal.jpg" alt="Taco" width="800" height="400" />
+                    <img src="https://www.gordonramsayrestaurants.com/assets/Carousels/_resampled/CroppedFocusedImage121578650-50-Tablet-0017-rgr-homepage-carousel-4.jpg" alt="Taco" width="800" height="400" />
                 </div>
 
                 <div class="item">
@@ -51,7 +54,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="https://www.gordonramsayrestaurants.com/assets/Carousels/_resampled/CroppedFocusedImage121578650-50-Tablet-0017-rgr-homepage-carousel-4.jpg" alt="Fish" width="800" height="400" />
+                    <img src="http://mexcalcuisine.com/wp-content/uploads/2014/05/gourmet-tacos-mexcal.jpg" alt="Fish" width="800" height="400" />
                 </div>
                 
                 <div class="item">
@@ -190,9 +193,11 @@
             </div>    
         </div>
         
-        <hr />       
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" class="btn btn-warning" value="Sign Out"/>
-        </form>
+        <hr />
+        <div class="container">
+            <form data-th-action="@{/logout}" method="post">
+                <input type="submit" class="btn btn-warning" value="Sign Out"/>
+            </form>
+        </div>
     </body>
 </html>

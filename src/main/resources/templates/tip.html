@@ -9,9 +9,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1 data-th-inline="text">Explore useful cooking tips and share yours!</h1>
+        <div class="container">
+            <h1 data-th-inline="text">Explore useful cooking tips and share yours!</h1>
+        </div>
 
-        <div>
+        <div class="container">
             <table style="border: 1px solid black" class="table table-hover">
                 <tr>
                     <th>ID</th>
@@ -27,24 +29,30 @@
         </div>
         
         <hr />
-        Post your advice <br />
-        <form data-th-action="@{/tip/add}" name="addTipForm" method="post">
-            Category:<br />
-            <input type="radio" name="category" value="Prep" /> Prep<br />
-            <input type="radio" name="category" value="Storing" /> Storing<br />
-            <input type="radio" name="category" value="Cooking" /> Cooking<br />
-            <input type="radio" name="category" value="Cleaning" /> Cleaning<br />
-            <input type="radio" name="category" value="Others" checked="checked" /> Others<br />
-            Cooking Tips: <input type="text" name="cookingTips" /><br />
-            <input type="submit" class="btn btn-success" value="Add Tips"/>
-        </form>
+        <div class="container">
+            Post your advice <br />
+            <form data-th-action="@{/tip/add}" name="addTipForm" method="post">
+                Category:<br />
+                <input type="radio" name="category" value="Prep" /> Prep<br />
+                <input type="radio" name="category" value="Storing" /> Storing<br />
+                <input type="radio" name="category" value="Cooking" /> Cooking<br />
+                <input type="radio" name="category" value="Cleaning" /> Cleaning<br />
+                <input type="radio" name="category" value="Others" checked="checked" /> Others<br />
+                Cooking Tips: <input type="text" name="cookingTips" /><br />
+                <input type="submit" class="btn btn-success" value="Add Tips"/>
+            </form>
+        </div>
         
         <hr />
-        <div>Go back to <a data-th-href="@{/main}">main page</a> ! </div>
+        <div class="container">
+            Go back to <a data-th-href="@{/main}">main page</a> ! 
+        </div>
         
-        <hr />       
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" class="btn btn-warning" value="Sign Out"/>
-        </form>
+        <hr />
+        <div class="container">
+            <form data-th-action="@{/logout}" method="post">
+                <input type="submit" class="btn btn-warning" value="Sign Out"/>
+            </form>
+        </div>
     </body>
 </html>

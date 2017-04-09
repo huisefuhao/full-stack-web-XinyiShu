@@ -10,22 +10,30 @@
     </head>
     
     <body>
-        <h1 data-th-inline="text">Share your own masterpiece</h1>
+        <div class="container">
+            <h1 data-th-inline="text">Share your own masterpiece</h1>
+        </div>
 
         <hr />
+        <div class="container">
             <a data-th-href="@{/files}">Upload a File</a>
-        <hr />
+        </div>
         
         <hr />
-        <div>View all <a data-th-href="@{/files}">files</a> </div>
-        <hr /> 
+        <div class="container">
+            View all <a data-th-href="@{/files}">files</a>
+        </div>
         
         <hr />
-        <div>Go back to <a data-th-href="@{/main}">main page</a> ! </div>
+        <div class="container">
+            Go back to <a data-th-href="@{/main}">main page</a> ! 
+        </div>
         
-        <hr />  
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" class="btn btn-warning" value="Sign Out"/>
-        </form>
+        <hr />
+        <div class="container">
+            <form data-th-action="@{/logout}" method="post">
+                <input type="submit" class="btn btn-warning" value="Sign Out"/>
+            </form>
+        </div>
     </body>
 </html>

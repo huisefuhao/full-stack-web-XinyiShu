@@ -9,9 +9,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1 data-th-inline="text">Explore good staff in kitchen and share your favorite!</h1>
+        <div class="container">
+            <h1 data-th-inline="text">Explore good staff in kitchen and share your favorite!</h1>
+        </div>
 
-        <div>
+        <div class="container">
             <table style="border: 1px solid black" class="table table-hover">
                 <tr>
                     <th>ID</th>
@@ -29,20 +31,24 @@
         </div>
         
         <hr />
-        Post your favorite <br />
-        <form data-th-action="@{/good/add}" name="addGoodForm" method="post">
-            Title: <input type="text" name="title" /><br />
-            Brand: <input type="text" name="brand" /><br />
-            Link to buy it: <input type="text" name="link" /><br />
-            <input type="submit" class="btn btn-success" value="Add good staff"/>
-        </form>
+        <div class="container">
+            Post your favorite <br />
+            <form data-th-action="@{/good/add}" name="addGoodForm" method="post">
+                Title: <input type="text" name="title" /><br />
+                Brand: <input type="text" name="brand" /><br />
+                Link to buy it: <input type="text" name="link" /><br />
+                <input type="submit" class="btn btn-success" value="Add good staff"/>
+            </form>
+        </div>
         
         <hr />
-        <div>Go back to <a data-th-href="@{/main}">main page</a> ! </div>
+        <div class="container">Go back to <a data-th-href="@{/main}">main page</a> ! </div>
         
-        <hr />       
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" class="btn btn-warning" value="Sign Out"/>
-        </form>
+        <hr />
+        <div class="container">
+            <form data-th-action="@{/logout}" method="post">
+                <input type="submit" class="btn btn-warning" value="Sign Out"/>
+            </form>
+        </div>
     </body>
 </html>

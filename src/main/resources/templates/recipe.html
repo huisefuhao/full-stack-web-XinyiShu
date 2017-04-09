@@ -9,9 +9,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s wonderful recipes!</h1>
-
-        <div>
+        <div class="container">
+            <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s wonderful recipes!</h1>
+        </div>
+        
+        <div class="container">
             <table style="border: 1px solid black" class="table table-hover">
                 <tr>
                     <th>ID</th>
@@ -29,20 +31,22 @@
         </div>
         
         <hr />
-        Add Recipe<br />
-        <form data-th-action="@{/recipe/add}" name="addRecipeForm" method="post">
-            Title: <input type="text" name="title" /><br />
-            Recipe Type:<br />
-            <input type="radio" name="recipeType" value="Unknown" checked="checked" /> Unknown<br />
-            <input type="radio" name="recipeType" value="MeatLover" /> MeatLover<br />
-            <input type="radio" name="recipeType" value="Vegetarian" /> Vegetarian<br />
-            <input type="radio" name="recipeType" value="Baker" /> Baker<br />
-            <input type="radio" name="recipeType" value="Alcoholic" /> Alcoholic<br />
-            <input type="radio" name="recipeType" value="SweetTooth" /> SweetTooth<br />
-            <input type="radio" name="recipeType" value="InstantGourmet" /> InstantGourmet<br />
-            Procedure: <input type="text" name="procedure" /><br />
-            <input type="submit" class="btn btn-success" value="Add Recipe"/>
-        </form>
+        <div class="container">
+            Add Recipe<br />
+            <form data-th-action="@{/recipe/add}" name="addRecipeForm" method="post">
+                Title: <input type="text" name="title" /><br />
+                Recipe Type:<br />
+                <input type="radio" name="recipeType" value="Unknown" checked="checked" /> Unknown<br />
+                <input type="radio" name="recipeType" value="MeatLover" /> MeatLover<br />
+                <input type="radio" name="recipeType" value="Vegetarian" /> Vegetarian<br />
+                <input type="radio" name="recipeType" value="Baker" /> Baker<br />
+                <input type="radio" name="recipeType" value="Alcoholic" /> Alcoholic<br />
+                <input type="radio" name="recipeType" value="SweetTooth" /> SweetTooth<br />
+                <input type="radio" name="recipeType" value="InstantGourmet" /> InstantGourmet<br />
+                Procedure: <input type="text" name="procedure" /><br />
+                <input type="submit" class="btn btn-success" value="Add Recipe"/>
+            </form>
+        </div>
         
         
         <!--
@@ -67,18 +71,24 @@
 
         
         <hr />
-        Delete Recipe<br />
-        <form data-th-action="@{/recipe/delete}" name="deleteRecipe" method="delete">
-            Input the recipe id that you want to delete: <input type="text" name="id" /><br /> 
-            <input type="submit" class="btn btn-danger" value="Delete recipe"/>
-        </form>
+        <div class="container">
+            Delete Recipe<br />
+            <form data-th-action="@{/recipe/delete}" name="deleteRecipe" method="delete">
+                Input the recipe id that you want to delete: <input type="text" name="id" /><br /> 
+                <input type="submit" class="btn btn-danger" value="Delete recipe"/>
+            </form>
+        </div>
         
         <hr />
-        <div>Go back to <a data-th-href="@{/main}">main page</a> ! </div>
+        <div class="container">
+            Go back to <a data-th-href="@{/main}">main page</a> ! 
+        </div>
         
-        <hr />       
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" class="btn btn-warning" value="Sign Out"/>
-        </form>
+        <hr />
+        <div class="container">
+            <form data-th-action="@{/logout}" method="post">
+                <input type="submit" class="btn btn-warning" value="Sign Out"/>
+            </form>
+        </div>
     </body>
 </html>

@@ -10,11 +10,11 @@
     </head>
     <body>
 
-        <div data-th-if="${message}">
+        <div data-th-if="${message}" class="container">
             <h2 data-th-text="${message}"></h2>
         </div>
 
-        <div>
+        <div class="container">
             <form data-th-action="@{/files}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                
 <!--            <form data-th-action="@{/files(${_csrf.parameterName}=${_csrf.token})}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                                -->
                 File to upload:<input type="file" name="file" /><br />
@@ -22,7 +22,7 @@
             </form>
         </div>
 
-        <div>
+        <div class="container">
             <ul>
                 <li data-th-each="file : ${files}">
                     <a data-th-href="${file}" data-th-text="${file}"></a>
