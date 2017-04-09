@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [v1.5.1] - 2017-04-09
+49f5872fa62949c19c4d4b67604459485b93c622
+### Added
+- add recipe update feature by using RequestMethod.PUT
+### modified
+- modify page layout and font by adding CSS
+
 ## [v1.5.0] - 2017-04-08
 eb1e661b4720855e0727ef958490e4cd717a0508
 ### Added
