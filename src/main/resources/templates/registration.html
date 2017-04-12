@@ -2,7 +2,14 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>User Login</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Create an account</title>
+    <!--<link href="${contextPath}/resources/static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="${contextPath}/resources/static/css/common.css" rel="stylesheet" />-->
   <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
       @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
@@ -152,13 +159,6 @@ body{
 </head>
 
 <body>
-  <div data-th-if="${param.error}" class="container">
-    Invalid username and password.
-  </div>
-  <div data-th-if="${param.logout}" class="container">
-    You have been logged out.
-  </div>
-
   <div class="body"></div>
   <div class="grad"></div>
   <div class="header">
@@ -166,65 +166,51 @@ body{
   </div>
   <br />
   
-  <div class="login">
+  <!--
+  <div class="signup">
     <form data-th-action="@{/login}" method="post">
 		<input type="text" placeholder="username" name="username" /><br />
 		<input type="password" placeholder="password" name="password" /><br />
+		<input type="password" placeholder="confirm password" name="password" /><br />
         <div class="btn-group">
-            <input type="submit" value="Sign In"/>
+            <input type="submit" value="Sign Up"/>
         </div>
     </form>
-    <form data-th-action="@{/registration}" method="post">
-            <input type="submit" value="Sign Up"/>
-    </form>
-  </div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  </div>-->
+  
+  
+<div class="login">
+    <form:form method="POST" modelAttribute="userForm" class="form-signin" >
+        <spring:bind path="username">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="text" path="username" class="form-control" placeholder="Username"
+                            autofocus="true"></form:input>
+                <form:errors path="username"></form:errors>
+            </div>
+        </spring:bind>
 
+        <spring:bind path="password">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>
+                <form:errors path="password"></form:errors>
+            </div>
+        </spring:bind>
+
+        <spring:bind path="passwordConfirm">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="password" path="passwordConfirm" class="form-control"
+                            placeholder="Confirm your password"></form:input>
+                <form:errors path="passwordConfirm"></form:errors>
+            </div>
+        </spring:bind>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </form:form>
+</div>
+  
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="${contextPath}/resources/static/js/bootstrap.min.js"></script>-->
   
 </body>
 </html>
-
-
-<!--
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>User Login</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
-    <div class="container">
-        <h2>Welcome to Masterchef</h2>
-    </div>
-    
-    <body>        
-        <div data-th-if="${param.error}" class="container">
-            Invalid username and password.
-        </div>
-        <div data-th-if="${param.logout}" class="container">
-            You have been logged out.
-        </div>
-        
-        <div class="container">
-            <form data-th-action="@{/login}" method="post">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input name="username" type="text" class="form-control" id="email" placeholder="Enter email"/>
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input name="password" type="password" class="form-control" id="pwd" placeholder="Enter password"/>
-                </div>
-                <br />
-                <div class="btn-group">
-                    <input type="submit" class="btn btn-info" value="Sign In"/>
-                    <input type="submit" class="btn btn-warning" value="Sign Up"/>
-                </div>
-            </form>
-        </div>
-    </body>
-</html>
--->
