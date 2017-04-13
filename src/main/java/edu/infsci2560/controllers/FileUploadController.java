@@ -3,7 +3,7 @@ package edu.infsci2560.controllers;
 
 import edu.infsci2560.storage.StorageFileNotFoundException;
 import edu.infsci2560.storage.StorageService;
-import org.springframework.beans.factogitry.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
