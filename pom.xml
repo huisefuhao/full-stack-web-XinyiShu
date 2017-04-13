@@ -113,13 +113,19 @@
             <artifactId>commons-dbcp</artifactId>
             <type>jar</type>
         </dependency>
+<<<<<<< HEAD
         
+=======
+>>>>>>> d11c78d8f9d4c0cf96c0faea9e2f6c811a79644c
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
             <scope>runtime</scope>
         </dependency>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d11c78d8f9d4c0cf96c0faea9e2f6c811a79644c
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
