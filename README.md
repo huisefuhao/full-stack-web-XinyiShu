@@ -33,6 +33,7 @@ Modify to match your project specific Travis Build
 * Update info in existing entries by users
 * Different sections
 * Upload files to the database by users
+* Bootstrap features
 
 
 ## Project Details
@@ -46,15 +47,20 @@ This is the login page. Return users can log in while new users can choose to si
 <img src="https://github.com/infsci2560sp17/full-stack-web-XinyiShu/blob/master/src/main/resources/login.png">
 
 ### Main Page
+Main page displays the guidance to the whole website and works as a central control. Several bootstrap features are used, such as carousal and modal. 
 
 ### Recipe Section
+Users can post recipes, delete existing recipes and update recipes. 
 
 ### Tip Section
+Users can post useful cooking tips here. 
 
 ### Good Section
+Users can share their favorite culinary tools and product, and the link to buy them. 
+
 
 ### Masterpiece Section
-
+In this section, users can upload pictures and files from their local path to the website. 
 
 ## API
 TODO : please provide a description of at least 1 API including a sample of request data and response data in both XML and JSON format.
